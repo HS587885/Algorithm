@@ -1,4 +1,6 @@
-a, b, c = map(int, input().split())
+import sys
+
+a, b, c = map(int, sys.stdin.readline().split())
 
 # Please write your code here.
 day, hour, mins = 11,11,11
