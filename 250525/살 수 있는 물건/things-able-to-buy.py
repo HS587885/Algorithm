@@ -1,8 +1,8 @@
 a = int(input())
 
-if 1000 < a:
+if 3000 <= a:
     print("book")
-elif a is 1000:
+elif 1000 <= a <3000:
     print("mask")
 else:
     print("no")
