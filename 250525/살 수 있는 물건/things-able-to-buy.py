@@ -1,6 +1,9 @@
 a = int(input())
-dic = {3000: "book", 1000:"mask"}
-try:
-    print(dic[a])
-except:
+
+if 1000 < a:
+    print("book")
+elif a is 1000:
+    print("mask")
+else:
     print("no")
+    
