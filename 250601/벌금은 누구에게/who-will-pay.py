@@ -1,19 +1,16 @@
-N, M, K = map(int, input().split())
-student = [int(input()) for _ in range(M)]
-lst = {i:0 for i in list(set(student))}
-
-# Please write your code here.
 from collections import deque
 
+N, M, K = map(int, input().split())
+student = [int(input()) for _ in range(M)]
+lst = {}
+
 s = deque(student)
-while M > 0:
+while s:
     std = s.popleft()
-    M -= 1
-    lst[std] += 1
-    if lst[std] >= K:
+    lst[std] = lst.get(std, 0) + 1
+    if lst[std] == K:
         print(std)
         break
-    
 
 
 
