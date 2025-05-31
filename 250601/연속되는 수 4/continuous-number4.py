@@ -1,13 +1,15 @@
 n = int(input())
 arr = [int(input()) for _ in range(n)]
 
-# Please write your code here.
-answer = []
-for i in range(2, len(arr)):
-    check = arr[i-1] + arr[i-2]
-    if arr[i] == check:
-        for num in arr[i-2:i+1]:
-            answer.append(num)
+max_len = 1
+current_len = 1
 
-answer = list(set(answer))
-print(len(answer))
+for i in range(1, n):
+    if arr[i] > arr[i - 1]:
+        current_len += 1
+        max_len = max(max_len, current_len)
+    else:
+        current_len = 1
+
+print(max_len)
+
