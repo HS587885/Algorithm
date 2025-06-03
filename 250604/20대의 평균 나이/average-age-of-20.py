@@ -1,16 +1,19 @@
 total = 0
-cnt = 0
+count = 0
 
 while True:
-    n = int(input())
-    if n > 29:
-        if cnt == 0:
-            print(0)
-        else:
-            average = total / cnt
-            print("%.2f" % round(average, 2))
-        break
+    age = int(input())
+
+    if 20 <= age <= 29:
+        total += age
+        count += 1
     else:
-        total += n
-        cnt += 1
+        break
+
+if count > 0:
+    average = total / count
+    print("%.2f" % average)
+else:
+    print("입력된 20대가 없습니다.")
+
 
