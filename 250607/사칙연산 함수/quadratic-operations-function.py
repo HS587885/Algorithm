@@ -10,7 +10,7 @@ def f(a,o,c):
     if o == '*':
         return f'{a} * {c} = {a * c}' 
     elif o == '/':
-        return f'{a} / {c} = {a / c}' 
+        return f'{a} / {c} = {int(a / c)}' 
     elif o == '-':
         return f'{a} - {c} = {a - c}' 
     elif 0 == '+':
