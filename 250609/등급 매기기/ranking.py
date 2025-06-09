@@ -9,7 +9,7 @@ def grading(n):
         return "C"
     elif 60 <= n < 70:
         return "D"
-    elif 60 < n:
+    elif n < 60:
         return "F"
 
 
