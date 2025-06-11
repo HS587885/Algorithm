@@ -1,13 +1,16 @@
-from collections import Counter
+import sys
 
-numbers = list(map(int, input().split()))
+numbers = list(map(int, sys.stdin.readline().split()))
 
-# 두 자리 수(10 이상)만 대상으로 십의 자리 추출
-tens_digits = [num // 10 for num in numbers if num >= 10]
+count = [0] * 10  # 인덱스 1~9만 사용
 
-# 개수 세기
-count = Counter(tens_digits)
+for num in numbers:
+    if num == 0:
+        break
+    if num >= 10:
+        tens = num // 10
+        if 1 <= tens <= 9:
+            count[tens] += 1
 
-# 출력
 for i in range(1, 10):
     print(f"{i} - {count[i]}")
