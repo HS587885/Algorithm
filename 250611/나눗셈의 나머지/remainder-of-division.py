@@ -1,12 +1,10 @@
-a,b = map(int, input().split())
+a, b = map(int, input().split())
 
-   
-lst = []
+remainders = []
 while a > 0:
     remainder = a % b
-    lst.append(remainder)
+    remainders.append(remainder)
     a = a // b
 
-cnt = [lst.count(i) ** 2 for i in list(set(lst))]
-print(sum(cnt))
-    
+total = sum(remainders.count(i) ** 2 for i in set(remainders))
+print(total)
