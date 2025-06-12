@@ -8,6 +8,7 @@ dy = [1, 0, -1, 0]
 x, y = 0, 0
 dir_num = 0  # 북쪽
 times = 0
+
 for cmd in commands:
     times += 1
     if cmd == "L":
@@ -20,7 +21,8 @@ for cmd in commands:
     if x == 0 and y == 0:
         print(times)
         break
-   
 
+if x != 0 and y!= 0:
+    print(-1)
 
     
