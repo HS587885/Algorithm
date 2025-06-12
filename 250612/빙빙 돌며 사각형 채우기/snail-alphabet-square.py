@@ -26,7 +26,7 @@ for i in range(1, n * m):
         visited[nx][ny] = True
 
     x,y = x + dx[dir_num], y + dy[dir_num]
-    grid[x][y] = alpha[i]
+    grid[x][y] = alpha[i%len(alpha)]
 
 
 for i in range(n):
