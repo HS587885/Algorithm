@@ -2,9 +2,8 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
-word = input().strip().replace(" ", "")
-for i in range(5, len(word), 5):
-    print(word[i-5:i])
+words = input().split()
+joined = ''.join(words)
 
-if len(word) % 5 != 0:
-    print(word[len(word) - len(word) % 5:])
+for i in range(0, len(joined), 5):
+    print(joined[i:i+5])
