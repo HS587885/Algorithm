@@ -1,17 +1,12 @@
 input_str = input()
 target_str = input()
 
-# Please write your code here.
-s = input_str
-length = len(s)
-exist = False
-
-t1, t2 = target_str[0], target_str[1]
-for i in range(length - 1):
-    if s[i] == t1 and s[i + 1] == t2:
-        exist =True
+found = False
+for i in range(len(input_str) - 1):
+    if input_str[i:i+2] == target_str:
         print(i)
+        found = True
         break
-if exist == False:
-    print(-1)
 
+if not found:
+    print(-1)
