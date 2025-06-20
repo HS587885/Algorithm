@@ -1,4 +1,3 @@
 s = input()
-only_alpha_upper = ''.join(c.lower() if c.isalpha() else c for c in s)
-only_alpha_upper = only_alpha_upper.replace('.', '').replace('@','')
-print(only_alpha_upper)
+result = ''.join(c.lower() for c in s if c.isalnum())
+print(result)
