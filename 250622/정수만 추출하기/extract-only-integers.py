@@ -2,7 +2,18 @@ import sys
 
 input = sys.stdin.readline
 
-a,b = map(str, input().split())
-a = a.split(".")
-b = b.split("%")
-print(int(a[0]) + int(b[0]))
+def extract_number(s):
+    result = ''
+    for c in s:
+        if c.isdigit():
+            result += c
+        else:
+            break
+    return int(result)
+
+a, b = input().split()
+
+num1 = extract_number(a)
+num2 = extract_number(b)
+
+print(num1 + num2)
